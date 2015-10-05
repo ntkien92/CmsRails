@@ -13,12 +13,22 @@
     <%= f.text_field :title %>
   </div>
   <div>
+    <%= f.label :short_descript %>
+  </div>
+  <div>
+    <%= f.text_field :short_descript %>
+  </div>
+  <div>
     <%= f.label :body %>
   </div>
   <div>
     <%= f.cktext_area :body, rows: 10 %>
   </div>
+  <br>
   <div>
     <%= f.submit %>
+  </div>
+  <div>
+    <%= link_to "Back", articles_path %>
   </div>
 <% end %>

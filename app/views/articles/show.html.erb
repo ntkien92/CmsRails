@@ -1,0 +1,12 @@
+<% if @article.errors.any? %>
+  <ul>
+    <%= @article.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+    <% end %>
+  </ul>
+<% end %>
+<h1><%= @article.title %></h1>
+<%= @article.body.html_safe %>
+<div>
+  <%= link_to "Edit", edit_article_path(@article) %>
+</div>
